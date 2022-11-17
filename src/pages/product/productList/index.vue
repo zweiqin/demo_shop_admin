@@ -322,6 +322,16 @@ export default {
     },
   },
   created() {},
+  activated() {
+    console.log("1激活activated钩子函数");
+    this.goodHeade();
+    this.goodsCategory();
+    if (this.$route.fullPath === "/admin/product/product_list?type=5") {
+      this.getPath();
+    } else {
+      this.getDataList();
+    }
+  },
   mounted() {
     this.goodHeade();
     this.goodsCategory();

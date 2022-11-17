@@ -65,7 +65,9 @@
             <!--            <keep-alive :include="cacheList">-->
             <!--              <router-view v-if="reload"/>-->
             <!--            </keep-alive>-->
-            <router-view v-if="reload" style="min-height: 600px" />
+            <keep-alive include='product_productList'>
+              <router-view v-if="reload" style="min-height: 600px" />
+            </keep-alive>
             <!--<ABackTop :height="100" :bottom="80" :right="50" container=".content-wrapper"></ABackTop>-->
           </Content>
           <i-copyright />
